@@ -13,17 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 6. 반환 위젯을 MaterialApp 위젯으로 
+    // 6.반환 위젯을 MaterialApp 위젯으로 
     return MaterialApp(
-      // 7. title 지정 
+      // 7.title 지정 
       title: 'First app',
-      // 8. ThemeData() 위젯 불러오기 
+      // 8.ThemeData() 위젯 불러오기 
       theme: ThemeData(
-        // 9. primarySwatch 아규먼트 불러오기 
-        // 10. blue 음영으로 지정 
+        // 9.primarySwatch 아규먼트 불러오기 
+        // 10.blue 음영으로 지정 
         primarySwatch: Colors.blue
       ),
-      // 11. home 에서 MyHomePage 위젯으로 커스텀 위젯 지점 
+      // 11.home 에서 MyHomePage 위젯으로 커스텀 위젯 지점 
       home: Scaffold(
         appBar: AppBar(
         title: Text('First app'),
