@@ -31,78 +31,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 244, 79, 29),
       ),
-      // body: Center(
-      //   child: Column(
-      //     children: [
-      //       const Padding(
-      //         padding: EdgeInsets.all(23.0),
-      //         child: CircleAvatar(
-      //           backgroundImage: AssetImage('images/sejong.jpg'),
-      //           radius: 50,
-      //         ),
-      //       ),
-      //       const Divider(
-      //         color: Colors.black,
-      //       ),
-      //       const Text('성웅',
-      //         style: TextStyle(
-      //         color: Colors.white,
-      //         ),
-      //       ),
-      //       const Text('이순신 장군',
-      //       style: TextStyle(
-      //         fontSize: 30,
-      //         color: Colors.white),
-      //       ),
-      //       const Text('전적',
-      //         style: TextStyle(
-      //           color: Colors.white
-      //         ),
-      //       ),
-      //       const Text('62전 62승',
-      //         style: TextStyle(
-      //           fontSize: 30,
-      //           color: Color.fromARGB(255, 210, 13, 112)
-      //         ),
-      //       ),
-      //       Padding(
-      //         padding: const EdgeInsets.all(15.0),
-      //         child: Row(
-      //           children: [
-      //             Padding(
-      //               padding: const EdgeInsets.all(10.0),
-      //               child: Column(
-      //                 children: const [
-      //                   Icon(Icons.check_circle_outline),
-      //                   Icon(Icons.check_circle_outline),
-      //                   Icon(Icons.check_circle_outline),
-      //                   Icon(Icons.check_circle_outline),
-      //                   Icon(Icons.check_circle_outline),
-      //                   Icon(Icons.check_circle_outline),
-      //                 ],
-      //               ),
-      //             ),
-      //             Column(
-      //               children: const [
-      //                 Text('옥포해전'),
-      //                 Text('사천포해전'),
-      //                 Text('당포해전'),
-      //                 Text('한산도대첩'),
-      //                 Text('부산포대첩'),
-      //                 Text('명량해전'),
-      //                 Text('노량해전'),
-      //               ],
-      //             )
-      //           ],
-      //         ),
-      //       ),
-      //       const CircleAvatar(
-      //           backgroundImage: AssetImage('images/turtle.gif'),
-      //           radius: 50,
-      //         ),
-      //     ],
-      //   ),
-      // ),
+      
 
       body: Column(
         children: [
