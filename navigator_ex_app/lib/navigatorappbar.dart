@@ -54,7 +54,9 @@ class Navigatorr extends StatelessWidget {
                 color: Colors.black,
               ),
               title: const Text('보낸 편지함'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/1st');
+              },
             ),
             ListTile(
               leading: const Icon(
@@ -62,7 +64,9 @@ class Navigatorr extends StatelessWidget {
                 color: Colors.black,
               ),
               title: const Text('받은 편지함'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/2nd');
+              },
             ),
           ],
         ),
