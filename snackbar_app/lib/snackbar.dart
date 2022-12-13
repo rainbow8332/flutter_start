@@ -13,7 +13,7 @@ class MySnackBar extends StatelessWidget {
                 content: Text(
                   'ElevatedVutton is Clicked',
                 ),
-                duration: Duration(seconds: 1),
+                duration: Duration(seconds: 5),
                 backgroundColor: Colors.red,
               ),
             );
