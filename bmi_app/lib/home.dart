@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
   late bool switchValue;
   late String _buttonState;
   late Color _color;
-  // late double _sliderValue;
+  late double _sliderValue;
 
   @override
   void initState() {
@@ -23,14 +23,14 @@ class _HomeState extends State<Home> {
     switchValue = false;
     _buttonState = '남';
     _color = Colors.deepPurple;
-    // _sliderValue = 170.0;
+    _sliderValue = 110.0;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
+        title: const Text('BMI    CALCULATOR'),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.purple,
@@ -205,29 +205,43 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.only(right: 5),
+                      children: [
+                         Padding(
+                          padding: const EdgeInsets.only(right: 5),
                           child: Text(
-                            '170',
-                            style: TextStyle(
+                            '$_sliderValue',
+                            style: const TextStyle(
                                 fontWeight: FontWeight.w500, fontSize: 40),
                           ),
                         ),
-                        Text(
-                          'Cm',
-                          style: TextStyle(fontWeight: FontWeight.w500),
-                        ),
+                        Column(
+                          children: const [
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Cm',
+                              style: TextStyle(fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        )
                       ],
                     ),
                     // Switch(value: switchValue, onChanged: (value) {})
-                    // Slider(
-                    //   value: _sliderValue,
-                    //   min: 0,
-                    //   max: 100,
-                    //   divisions: 20,
-                    //   onChanged: (value) {},
-                    // ),
+                    Slider(
+                      activeColor: Colors.yellow,
+                      // thumbColor: Colors.black,
+                      inactiveColor: Colors.grey,
+                      value: _sliderValue,
+                      min: 110,
+                      max: 190,
+                      divisions: 10,
+                      onChanged: (value) {
+                        setState(() {
+                          _sliderValue = value;
+                        });
+                      },
+                    ),
                   ],
                 ),
               ),
