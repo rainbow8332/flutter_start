@@ -14,6 +14,8 @@ class _HomeState extends State<Home> {
   late String _buttonState;
   late Color _color;
   late double _sliderValue;
+  late String resultText;
+
 
   @override
   void initState() {
@@ -24,6 +26,7 @@ class _HomeState extends State<Home> {
     _buttonState = '남';
     _color = Colors.deepPurple;
     _sliderValue = 110.0;
+    resultText = "";
   }
 
   @override
@@ -206,7 +209,7 @@ class _HomeState extends State<Home> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                         Padding(
+                        Padding(
                           padding: const EdgeInsets.only(right: 5),
                           child: Text(
                             '$_sliderValue',
@@ -254,18 +257,42 @@ class _HomeState extends State<Home> {
               child: Card(
                 elevation: 10,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 20, bottom: 20),
+                  padding: const EdgeInsets.only(top: 20, left: 20, bottom: 10),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            _onClick();
-                          },
-                          child: Text(_buttonState),
-                          style:
-                              ElevatedButton.styleFrom(backgroundColor: _color),
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 1),
+                          child: Text(
+                            'Gender',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500, fontSize: 20),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.add_reaction_outlined,
+                              color: Colors.deepPurpleAccent,
+                              size: 35.0,
+                            ),
+                            const SizedBox(
+                              width: 30,
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                _onClick();
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: _color),
+                              child: Text(_buttonState),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -327,7 +354,10 @@ class _HomeState extends State<Home> {
               height: 45,
               width: 100,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // showAddResult(context);
+                    Navigator.pushNamed(context, '/normal');
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       shape: RoundedRectangleBorder(
@@ -340,6 +370,10 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 30,
             ),
+            Text(resultText,
+                      style: const TextStyle(
+                        fontSize: 25,
+                      ))
           ],
         )),
       ),
@@ -364,5 +398,12 @@ class _HomeState extends State<Home> {
       }
     });
     print(_buttonState);
+  }
+
+    showAddResult(BuildContext context) {
+    setState(() {
+      resultText =
+          '결과: ${count1/(_sliderValue * _sliderValue)}';
+    });
   }
 } // End
