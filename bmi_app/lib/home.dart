@@ -355,7 +355,7 @@ class _HomeState extends State<Home> {
               width: 100,
               child: ElevatedButton(
                   onPressed: () {
-                    // showAddResult(context);
+                    showAddResult(context);
                     Navigator.pushNamed(context, '/normal');
                   },
                   style: ElevatedButton.styleFrom(
