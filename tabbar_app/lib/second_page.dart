@@ -15,7 +15,7 @@ class _SecondPageState extends State<SecondPage> {
         title: const Text("Second Page"),
       ),
       body: Center(
-        child: Text("첫번째 페이지"),
+        child: Text("두번째 페이지"),
       ),
     );
   }
