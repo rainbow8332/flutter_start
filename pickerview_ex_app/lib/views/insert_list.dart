@@ -137,6 +137,6 @@ class _InsertListState extends State<InsertList> {
     Message.imagePath = selectedImage[selectedItem];
     Message.isnew = true;
     // 입력한 값을 model 에 저장 
-    Navigator.pop(context);  // 이전 페이지로 이동 , table_liat 
+    Navigator.pop(context);  // 이전 페이지로 이동 , table_list 
   }
 }
